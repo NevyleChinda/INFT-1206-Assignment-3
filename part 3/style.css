@@ -25,17 +25,29 @@ img {
 .grid {
   margin: 0 auto;
   max-width: 980px;
+  /*  Display <article> and <aside> as two flexible
+  columns */
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
 }
 
 nav {
   background-color: black;
   padding: 0.5em;
+  /*  Making navigation bar scroll with content normally but
+   sticky to top of viewport */
+  top: 0;
+  position: sticky;
 }
 
 nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  /*  Displaying the navigation items in a row */
+  display: flex;
+  justify-content: space-around;
 }
 
 nav a {
